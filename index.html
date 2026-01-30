@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Психолог • Гипнопсихоаналитик — Котова Екатерина Петровна</title>
+  <meta name="description" content="Сайт-визитка дипломированного психолога и гипнопсихоаналитика — Котова Екатерина Петровна: диплом, квалификация, компетенции, контакты, видеовизитка." />
+
+  <style>
+    :root{
+      --bg1:#ffffff;
+      --bg2:#eef6ff;
+      --text:#0b1220;
+      --muted:#4a5a75;
+      --card:rgba(255,255,255,.72);
+      --border:rgba(14,35,66,.12);
+      --shadow:0 14px 40px rgba(10, 25, 45, .10);
+      --radius:22px;
+      --accent:#1f6feb;
+      --accent2:#2dd4bf;
+      --max:1100px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(31,111,235,.10), transparent 60%),
+        radial-gradient(900px 500px at 80% 25%, rgba(45,212,191,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      overflow-x:hidden;
+    }
+
+    .bg-lines{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.75;
+      z-index:-1;
+    }
+
+    a{ color:inherit; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 70px; }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:10px 0 18px;
+    }
+    .brand{ display:flex; gap:12px; align-items:center; }
+    .logo{
+      width:44px; height:44px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(31,111,235,.18), rgba(45,212,191,.18));
+      border:1px solid var(--border);
+      box-shadow: 0 10px 25px rgba(31,111,235,.10);
+      position:relative;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:10px;
+      border-radius:12px;
+      border:1px dashed rgba(14,35,66,.20);
+    }
+    .brand h1{ margin:0; font-size:16px; line-height:1.2; letter-spacing:.2px; }
+    .brand p{ margin:2px 0 0; color:var(--muted); font-size:13px; }
+
+    nav{
+      display:flex; flex-wrap:wrap; gap:10px;
+      justify-content:flex-end;
+    }
+    nav a{
+      text-decoration:none;
+      font-size:13px;
+      color:rgba(11,18,32,.86);
+      padding:9px 12px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:rgba(255,255,255,.55);
+      backdrop-filter: blur(10px);
+      transition:.2s ease;
+    }
+    nav a:hover{ transform: translateY(-1px); box-shadow:0 10px 22px rgba(10,25,45,.08); }
+
+    .hero{
+      margin-top:10px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+      nav{ justify-content:flex-start; }
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(12px);
+      overflow:hidden;
+    }
+    .hero-main{ padding:26px 22px; position:relative; }
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      font-size:13px; color:rgba(11,18,32,.75);
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.55);
+    }
+    .dot{
+      width:8px;height:8px;border-radius:99px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow:0 0 0 4px rgba(31,111,235,.08);
+    }
+    .hero-main h2{
+      margin:14px 0 8px;
+      font-size:36px;
+      line-height:1.08;
+      letter-spacing:-.4px;
+    }
+    .hero-main .subtitle{
+      margin:0;
+      font-size:15px;
+      color:var(--muted);
+      max-width:60ch;
+      line-height:1.55;
+    }
+    .actions{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .btn{
+      appearance:none;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.70);
+      padding:12px 14px;
+      border-radius:14px;
+      cursor:pointer;
+      font-weight:600;
+      font-size:14px;
+      transition:.2s ease;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow:0 10px 22px rgba(10,25,45,.08); }
+    .btn.primary{
+      border-color: rgba(31,111,235,.25);
+      background: linear-gradient(135deg, rgba(31,111,235,.16), rgba(45,212,191,.12));
+    }
+
+    .hero-side{ display:grid; grid-template-rows: auto 1fr; gap:18px; }
+    .profile{
+      padding:18px;
+      display:grid;
+      grid-template-columns: 92px 1fr;
+      gap:14px;
+      align-items:center;
+    }
+    .avatar{
+      width:92px;height:92px;border-radius:18px;
+      border:1px solid var(--border);
+      overflow:hidden;
+      background:rgba(255,255,255,.65);
+    }
+    .avatar img{ width:100%;height:100%;object-fit:cover; display:block; }
+    .profile h3{ margin:0; font-size:18px; }
+    .profile .meta{ margin:6px 0 0; color:var(--muted); font-size:13px; line-height:1.4; }
+    .tags{ margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
+    .tag{
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.55);
+      color:rgba(11,18,32,.82);
+    }
+
+    section{ margin-top:18px; }
+    .section-head{
+      padding:16px 18px 0;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .section-head h4{ margin:0; font-size:16px; letter-spacing:.2px; }
+    .section-head p{ margin:0; font-size:13px; color:var(--muted); }
+
+    .grid{
+      padding:16px 18px 18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 900px){ .grid{ grid-template-columns: 1fr; } }
+
+    .panel{
+      background:rgba(255,255,255,.62);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:14px;
+    }
+    .panel h5{ margin:0 0 8px; font-size:14px; }
+    .panel ul{ margin:0; padding-left:18px; color:rgba(11,18,32,.86); line-height:1.6; }
+    .panel p{ margin:0; color:rgba(11,18,32,.86); line-height:1.6; }
+    .small{ font-size:13px; color:var(--muted); line-height:1.55; }
+
+    .doc{ display:flex; gap:14px; align-items:flex-start; }
+    .doc-thumb{
+      width:140px;
+      aspect-ratio: 3 / 4;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.65);
+      overflow:hidden;
+      flex: 0 0 auto;
+    }
+    .doc-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .doc-info{ flex:1; }
+
+    .contacts{
+      padding:16px 18px 18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){ .contacts{ grid-template-columns: 1fr; } }
+    .contact-item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:14px;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.62);
+    }
+    .ico{
+      width:42px;height:42px;border-radius:14px;
+      border:1px solid var(--border);
+      background: linear-gradient(135deg, rgba(31,111,235,.14), rgba(45,212,191,.10));
+      display:grid; place-items:center;
+      flex:0 0 auto;
+    }
+    .contact-item h6{ margin:0; font-size:13px; }
+    .contact-item a, .contact-item span{
+      display:inline-block;
+      margin-top:6px;
+      color:rgba(11,18,32,.90);
+      text-decoration:none;
+      font-weight:650;
+      line-height:1.35;
+      word-break:break-word;
+    }
+    .contact-item a:hover{ text-decoration:underline; }
+
+    .video-wrap{ padding:16px 18px 18px; }
+    .video{
+      width:100%;
+      aspect-ratio: 16/9;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.62);
+      overflow:hidden;
+    }
+    .video iframe, .video video{ width:100%; height:100%; display:block; border:0; }
+
+    /* Карта */
+    .map{
+      width:100%;
+      height:360px;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.62);
+      overflow:hidden;
+    }
+    @media (max-width: 900px){ .map{ height:320px; } }
+
+    footer{
+      margin-top:18px;
+      padding:18px;
+      color:rgba(11,18,32,.72);
+      font-size:12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .modal{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background:rgba(6,10,18,.45);
+      backdrop-filter: blur(6px);
+      z-index:50;
+    }
+    .modal[open]{ display:flex; }
+    .modal .box{
+      width:min(920px, 100%);
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.92);
+      box-shadow: 0 30px 90px rgba(0,0,0,.25);
+      overflow:hidden;
+    }
+    .modal .top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 14px;
+      border-bottom:1px solid var(--border);
+    }
+    .modal .top strong{ font-size:13px; }
+    .xbtn{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.8);
+      border-radius:12px;
+      padding:8px 10px;
+      cursor:pointer;
+      font-weight:700;
+    }
+    .modal .img{
+      width:100%;
+      max-height: 78vh;
+      object-fit:contain;
+      display:block;
+      background:#fff;
+    }
+  </style>
+</head>
+
+<body>
+  <svg class="bg-lines" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+        <path d="M 36 0 L 0 0 0 36" fill="none" stroke="rgba(31,111,235,.10)" stroke-width="1"/>
+      </pattern>
+      <linearGradient id="wave" x1="0" x2="1">
+        <stop offset="0" stop-color="rgba(31,111,235,.16)"/>
+        <stop offset="1" stop-color="rgba(45,212,191,.14)"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="700" fill="url(#grid)"/>
+    <path d="M0,160 C220,220 360,90 540,150 C740,215 860,120 1200,170 L1200,0 L0,0 Z" fill="url(#wave)" opacity=".35"/>
+    <path d="M0,520 C220,430 360,600 540,520 C740,420 900,610 1200,520 L1200,700 L0,700 Z" fill="url(#wave)" opacity=".26"/>
+    <path d="M-40,310 C150,200 360,410 560,300 C760,190 960,430 1240,290" fill="none" stroke="rgba(31,111,235,.18)" stroke-width="2"/>
+    <path d="M-40,350 C170,460 360,250 560,360 C760,470 960,220 1240,360" fill="none" stroke="rgba(45,212,191,.16)" stroke-width="2"/>
+  </svg>
+
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Психолог • Гипнопсихоаналитик</h1>
+          <p>Очные и онлайн-консультации</p>
+        </div>
+      </div>
+
+      <nav aria-label="Навигация">
+        <a href="#about">О специалисте</a>
+        <a href="#diploma">Диплом</a>
+        <a href="#skills">Квалификация</a>
+        <a href="#competence">Компетенции</a>
+        <a href="#conditions">Условия</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#map">Карта</a>
+        <a href="#video">Видеовизитка</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <section class="card hero-main" id="about">
+          <div class="kicker"><span class="dot" aria-hidden="true"></span> Дипломированный специалист</div>
+          <h2>Котова Екатерина Петровна</h2>
+          <p class="subtitle">
+            Дипломированный психолог, гипнопсихоаналитик. Работаю бережно и конфиденциально, помогаю пройти
+            сложные жизненные периоды, восстановить опору и найти решения в ситуациях, где кажется, что выхода нет.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="#contacts">Записаться на консультацию</a>
+            <a class="btn" href="#video">Смотреть видеовизитку</a>
+          </div>
+
+          <p class="small" style="margin-top:14px;">
+            *Информация на сайте носит ознакомительный характер и не заменяет медицинскую помощь.
+          </p>
+        </section>
+
+        <aside class="hero-side">
+          <section class="card profile" aria-label="Карточка специалиста">
+            <div class="avatar">
+              <img src="photo.jpg" alt="Фотография специалиста: Котова Екатерина Петровна"
+                onerror="this.style.display='none'; this.parentElement.style.display='grid'; this.parentElement.style.placeItems='center'; this.parentElement.innerHTML='<span style=&quot;color: rgba(11,18,32,.65); font-size:12px; padding:10px; text-align:center;&quot;>Добавьте файл <b>photo.jpg</b><br/>рядом с index.html</span>';">
+            </div>
+            <div>
+              <h3>Котова Екатерина Петровна</h3>
+              <p class="meta">Психолог • Гипнопсихоаналитик<br/>Челябинск</p>
+              <div class="tags" aria-label="Ключевые направления">
+                <span class="tag">Кризисы</span>
+                <span class="tag">Травма</span>
+                <span class="tag">Ресурсы</span>
+                <span class="tag">Реабилитация</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="section-head">
+              <h4>Коротко о подходе</h4>
+              <p>как я работаю</p>
+            </div>
+            <div class="grid" style="grid-template-columns:1fr; padding-top:12px;">
+              <div class="panel">
+                <p>
+                  • Конфиденциально и бережно, с опорой на профессиональную этику.<br/>
+                  • В кризисе — сначала стабилизация, затем работа с причинами.<br/>
+                  • Поддерживаю в формировании решений и возвращении контроля над жизнью.
+                </p>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <!-- ✅ ЗАМЕНА БЛОКА "Диплом" (section id="diploma") целиком -->
+<section class="card" id="diploma">
+  <div class="section-head">
+    <h4>Диплом</h4>
+    <p>подтверждение образования</p>
+  </div>
+
+  <div class="grid">
+    <!-- Диплом о высшем образовании -->
+    <div class="panel">
+      <div class="doc">
+        <div class="doc-thumb" role="button" tabindex="0"
+             aria-label="Открыть диплом в большом размере" id="openDiploma">
+          <img src="diploma.jpg" alt="Диплом: Котова Екатерина Петровна"
+            onerror="this.style.display='none'; this.parentElement.style.display='grid'; this.parentElement.style.placeItems='center'; this.parentElement.innerHTML='<span style=&quot;color: rgba(11,18,32,.65); font-size:12px; padding:10px; text-align:center;&quot;>Добавьте файл <b>diploma.jpg</b><br/>рядом с index.html</span>';">
+        </div>
+
+        <div class="doc-info">
+          <h5>Диплом о высшем образовании</h5>
+          <p class="small">
+            Учебное заведение: <b>ЧелГУ</b><br/>
+            Специальность: <b>Психология</b><br/>
+            Год: <b>2004</b>
+          </p>
+          <button class="btn" type="button" id="openDiplomaBtn">Открыть диплом</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Диплом о повышении квалификации (отдельное превью) -->
+    <div class="panel">
+      <div class="doc">
+        <div class="doc-thumb" role="button" tabindex="0"
+             aria-label="Открыть диплом о повышении квалификации в большом размере" id="openQual">
+          <!-- Положите рядом файл qual2025.jpg -->
+          <img src="qual2025.jpg" alt="Диплом о повышении квалификации: Котова Екатерина Петровна"
+            onerror="this.style.display='none'; this.parentElement.style.display='grid'; this.parentElement.style.placeItems='center'; this.parentElement.innerHTML='<span style=&quot;color: rgba(11,18,32,.65); font-size:12px; padding:10px; text-align:center;&quot;>Добавьте файл <b>qual2025.jpg</b><br/>рядом с index.html</span>';">
+        </div>
+
+        <div class="doc-info">
+          <h5>Повышение квалификации</h5>
+          <p class="small">
+            Документ: <b>Диплом о повышении квалификации</b><br/>
+            Специальность: <b>Гипнолог, гипнопсихоаналитик</b><br/>
+            Год: <b>2025</b>
+          </p>
+          <button class="btn" type="button" id="openQualBtn">Открыть документ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ ДОБАВЬТЕ НИЖЕ ВТОРУЮ МОДАЛКУ (рядом с первой modalkой диплома) -->
+<dialog class="modal" id="qualModal" aria-label="Просмотр диплома о повышении квалификации">
+  <div class="box">
+    <div class="top">
+      <strong>Повышение квалификации — Котова Екатерина Петровна</strong>
+      <button class="xbtn" type="button" id="closeQual" aria-label="Закрыть">✕</button>
+    </div>
+    <img class="img" src="qual2025.jpg" alt="Диплом о повышении квалификации в большом размере" />
+  </div>
+</dialog>
+
+<!-- ✅ ЗАМЕНА СКРИПТА (или вставьте этот кусок В КОНЕЦ вашего <script>) -->
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // --- Модалка диплома (высшее) ---
+  const diplomaModal = document.getElementById('diplomaModal');
+  const openDiploma1 = document.getElementById('openDiploma');
+  const openDiploma2 = document.getElementById('openDiplomaBtn');
+  const closeDiploma = document.getElementById('closeDiploma');
+
+  function openDialog(d){
+    if (!d) return;
+    if (typeof d.showModal === 'function') d.showModal();
+    else d.setAttribute('open','');
+  }
+  function closeDialog(d){
+    if (!d) return;
+    if (typeof d.close === 'function') d.close();
+    else d.removeAttribute('open');
+  }
+
+  [openDiploma1, openDiploma2].forEach(el => {
+    if(!el) return;
+    el.addEventListener('click', () => openDialog(diplomaModal));
+    el.addEventListener('keydown', (e)=> {
+      if(e.key === 'Enter' || e.key === ' ') openDialog(diplomaModal);
+    });
+  });
+  if (closeDiploma) closeDiploma.addEventListener('click', () => closeDialog(diplomaModal));
+  if (diplomaModal) diplomaModal.addEventListener('click', (e)=> { if(e.target === diplomaModal) closeDialog(diplomaModal); });
+
+  // --- Модалка повышения квалификации ---
+  const qualModal = document.getElementById('qualModal');
+  const openQual1 = document.getElementById('openQual');
+  const openQual2 = document.getElementById('openQualBtn');
+  const closeQual = document.getElementById('closeQual');
+
+  [openQual1, openQual2].forEach(el => {
+    if(!el) return;
+    el.addEventListener('click', () => openDialog(qualModal));
+    el.addEventListener('keydown', (e)=> {
+      if(e.key === 'Enter' || e.key === ' ') openDialog(qualModal);
+    });
+  });
+  if (closeQual) closeQual.addEventListener('click', () => closeDialog(qualModal));
+  if (qualModal) qualModal.addEventListener('click', (e)=> { if(e.target === qualModal) closeDialog(qualModal); });
+
+  // --- Закрытие по Escape (для обеих) ---
+  document.addEventListener('keydown', (e)=> {
+    if(e.key !== 'Escape') return;
+    if (diplomaModal && diplomaModal.hasAttribute('open')) closeDialog(diplomaModal);
+    if (qualModal && qualModal.hasAttribute('open')) closeDialog(qualModal);
+  });
+</script>
+
+
+      <!-- КВАЛИФИКАЦИЯ -->
+      <section class="card" id="skills">
+        <div class="section-head">
+          <h4>Квалификация</h4>
+          <p>образование и профиль</p>
+        </div>
+        <div class="grid">
+          <div class="panel">
+            <h5>Профиль</h5>
+            <ul>
+              <li>Дипломированный психолог</li>
+              <li>Гипнолог, гипнопсихоаналитик</li>
+              <li>Формат: очно (Челябинск) и онлайн</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h5>Фокус работы (что делаем в процессе)</h5>
+            <ul>
+              <li>Стабилизация в острых состояниях и кризисах</li>
+              <li>Помощь в формировании опоры и восстановлении ресурса</li>
+              <li>Прояснение ситуации: “что происходит” → “что я могу” → “какой шаг следующий”</li>
+              <li>Построение плана изменений и поддержка в его реализации</li>
+              <li>Бережная работа с травматическим опытом</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- КОМПЕТЕНЦИИ -->
+      <section class="card" id="competence">
+        <div class="section-head">
+          <h4>Компетенции</h4>
+          <p>с какими запросами можно обратиться</p>
+        </div>
+        <div class="grid">
+          <div class="panel">
+            <h5>Основные направления (темы запросов)</h5>
+            <ul>
+              <li>Кризисное вмешательство</li>
+              <li>Выявление и активация ресурсов</li>
+              <li>Решение проблем и принятие решений, работа с отрицанием</li>
+              <li>Травма и зависимость</li>
+              <li>Социальная реабилитация</li>
+              <li>Дискомфортные состояния</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h5>Как это может выглядеть на практике</h5>
+            <p class="small">
+              На встречах мы уточняем запрос, определяем цель, выделяем ключевые “узлы” ситуации и подбираем техники,
+              которые подходят именно вам. В кризисных случаях — фокус на безопасности, стабилизации и поддержке.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- УСЛОВИЯ / СТОИМОСТЬ -->
+      <section class="card" id="conditions">
+        <div class="section-head">
+          <h4>Условия консультаций</h4>
+          <p>длительность и стоимость</p>
+        </div>
+        <div class="grid">
+          <div class="panel">
+            <h5>Сессия</h5>
+            <ul>
+              <li>Длительность: <b>90 минут</b></li>
+              <li>Стоимость: <b>1200 руб</b></li>
+              <li>Формат: очно / онлайн</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h5>Правила отмены и переноса</h5>
+            <p class="small">
+              Просьба предупредить об отмене или переносе сессии <b>за 24 часа</b>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- КОНТАКТЫ -->
+      <section class="card" id="contacts">
+        <div class="section-head">
+          <h4>Контакты</h4>
+          <p>связаться и записаться</p>
+        </div>
+
+        <div class="contacts">
+          <div class="contact-item">
+            <div class="ico" aria-hidden="true">📞</div>
+            <div>
+              <h6>Телефон</h6>
+              <a href="tel:88005555555">8 (800) 555-55-55</a>
+              <div class="small">Звонки и сообщения</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="ico" aria-hidden="true">📍</div>
+            <div>
+              <h6>Адрес</h6>
+              <span>Челябинск, ул. Маркова, дом 1, офис 34</span>
+              <div class="small">Очный приём по записи</div>
+            </div>
+          </div>
+        </div>
+        <!-- ✅ ВСТАВЬТЕ ЭТО в секцию #contacts (после блока .contacts) -->
+          <div class="grid" style="padding-top:0;">
+            <div class="panel">
+              <h5>Запись</h5>
+              <p class="small">
+                Удобнее всего записаться через Telegram: напишите сообщение, и я предложу доступные слоты.
+              </p>
+            <div class="actions" style="margin-top:12px;">
+            <a class="btn primary" href="https://t.me/Nu_et_ya" target="_blank" rel="noopener">Записаться в Telegram</a>
+          </div>
+  </div>
+</div>
+      </section>
+
+      <!-- КАРТА -->
+      <section class="card" id="map">
+        <div class="section-head">
+          <h4>Карта</h4>
+          <p>как добраться</p>
+        </div>
+        <div class="grid" style="grid-template-columns:1fr;">
+          <div class="panel">
+            <div class="map" aria-label="Карта Яндекс">
+              <!-- Яндекс Карты: простой embed по поисковому запросу (работает без API-ключа) -->
+              <iframe
+                title="Яндекс Карта — Челябинск, ул. Маркова, дом 1, офис 34"
+                src="https://yandex.ru/map-widget/v1/?text=%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D0%B0%2C%20%D0%B4%D0%BE%D0%BC%201%2C%20%D0%BE%D1%84%D0%B8%D1%81%2034&z=16"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                allowfullscreen="true"
+                style="border:0;"></iframe>
+            </div>
+            <p class="small" style="margin-top:10px;">
+              <!--Если захотите, можно заменить на “точку” с меткой (через ссылку-поделиться в Яндекс Картах).-->
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ВИДЕО -->
+      <section class="card" id="video">
+        <div class="section-head">
+          <h4>Видеовизитка</h4>
+          <p>короткое знакомство</p>
+        </div>
+
+        <div class="video-wrap">
+          <div class="video" aria-label="Видеовизитка">
+            <!-- Вставьте сюда свой YouTube embed (замените ВАШ_ID_ВИДЕО) -->
+            <iframe
+              src="https://www.youtube.com/embed/ВАШ_ID_ВИДЕО"
+              title="Видеовизитка — Котова Екатерина Петровна"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+
+            <!-- Вариант 2: локальный файл video.mp4 (раскомментируйте и закомментируйте iframe выше)
+            <video controls preload="metadata">
+              <source src="video.mp4" type="video/mp4" />
+              Ваш браузер не поддерживает видео.
+            </video>
+            -->
+          </div>
+
+          <p class="small" style="margin:10px 2px 0;">
+            <!--Пришлите ссылку на видео (YouTube / VK / RuTube) — вставлю точный вариант под платформу.-->
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="card" role="contentinfo">
+      <span>© <span id="y"></span> Котова Екатерина Петровна. Все права защищены.</span>
+      <span class="small">Конфиденциальность • Этические принципы • По записи</span>
+    </footer>
+  </div>
+
+  <!-- Модалка диплома -->
+  <dialog class="modal" id="diplomaModal" aria-label="Просмотр диплома">
+    <div class="box">
+      <div class="top">
+        <strong>Диплом — Котова Екатерина Петровна</strong>
+        <button class="xbtn" type="button" id="closeDiploma" aria-label="Закрыть">✕</button>
+      </div>
+      <img class="img" src="diploma.jpg" alt="Диплом в большом размере" />
+    </div>
+  </dialog>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const modal = document.getElementById('diplomaModal');
+    const open1 = document.getElementById('openDiploma');
+    const open2 = document.getElementById('openDiplomaBtn');
+    const close = document.getElementById('closeDiploma');
+
+    function openModal(){
+      if (typeof modal.showModal === 'function') modal.showModal();
+      else modal.setAttribute('open','');
+    }
+    function closeModal(){
+      if (typeof modal.close === 'function') modal.close();
+      else modal.removeAttribute('open');
+    }
+
+    [open1, open2].forEach(el => {
+      if(!el) return;
+      el.addEventListener('click', openModal);
+      el.addEventListener('keydown', (e)=> {
+        if(e.key === 'Enter' || e.key === ' ') openModal();
+      });
+    });
+
+    close.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e)=> { if(e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e)=> {
+      if(e.key === 'Escape' && modal.hasAttribute('open')) closeModal();
+    });
+  </script>
+</body>
+</html>
